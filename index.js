@@ -21,6 +21,7 @@ function createWindow () {
   mainWindow.on('closed', function () {
     mainWindow = null
   })
+  mainWindow.webContents.openDevTools()
 }
 
 ElectApp.on('ready', createWindow)
