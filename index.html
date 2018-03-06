@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>First Electron App</title>
+    
+</head>
+<body>
+    <h1>This is H1 tag</h1>
+</body>
+<script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+       $('h1').fadeOut(2000);
+    });
+</script>
+<script>if (window.module) module = window.module;</script>
+</html>
