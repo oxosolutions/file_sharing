@@ -53,7 +53,7 @@ $(document).on('nifty.ready', function() {
     var uplodaBtn = $('#dz-upload-btn');
     var removeBtn = $('#dz-remove-btn');
     var myDropzone = new Dropzone(document.body, { // Make the whole body a dropzone
-        url: "/target-url", // Set the url
+        url: "/upload", // Set the url
         thumbnailWidth: 50,
         thumbnailHeight: 50,
         parallelUploads: 20,
@@ -88,8 +88,9 @@ $(document).on('nifty.ready', function() {
 
     // Setup the buttons for all transfers
     uplodaBtn.on('click', function() {
+        //console.log(myDropzone.files);
         //Upload all files
-        //myDropzone.enqueueFiles(myDropzone.getFilesWithStatus(Dropzone.ADDED));
+        myDropzone.enqueueFiles(myDropzone.getFilesWithStatus(Dropzone.ADDED));
     });
 
     removeBtn.on('click', function() {
